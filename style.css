@@ -1,0 +1,189 @@
+ 
+        /* Establecer la altura deseada para las imágenes del carrusel */
+        .carousel-img {
+            height: 770px; /* Ajusta la altura según tus necesidades */
+        }
+
+        /* Centrar vertical y horizontalmente el contenido del carrusel en desktop */
+        .carousel-caption {
+            position: absolute;
+            top: 50%;
+            
+            margin-top: 75px; /* Ajusta la distancia desde la parte superior */
+        }
+
+        /* Fondo negro con degradado */
+        .carousel-item {
+            position: relative;
+        }
+
+        .carousel-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)); /* Ajusta los valores según sea necesario */
+            z-index: 1;
+        }
+
+        /* Texto blanco en el carrusel */
+        .carousel-caption.text-white {
+            color: white;
+        }
+        /* Estilo para los controles previos */
+.carousel-control-prev {
+    width: 5%; /* Ancho del control */
+    left: 0; /* Posicionamiento a la izquierda */
+}
+ 
+
+  
+  nav {
+    background-color: #e9eaef;
+    color: #fff;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease, padding 0.3s ease; /* Agregar transición para una apariencia suave */
+  }
+ 
+   
+  .scrolled {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+ 
+
+
+/* Estilo para los controles siguientes */
+.carousel-control-next {
+    width: 5%; /* Ancho del control */
+    right: 0; /* Posicionamiento a la derecha */
+}
+
+/* Estilo para los iconos de los controles */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #ff0000; /* Color de fondo del icono */
+    color: #820606; /* Color del icono */
+}
+
+/* Estilo para el texto 'Previous' y 'Next' (sr-only) */
+.carousel-control-prev span.sr-only,
+.carousel-control-next span.sr-only {
+    /* Puedes personalizar el estilo del texto si lo deseas */
+    display: none; /* Para ocultar el texto */
+}
+
+h1.text-center {
+    color: #9c0606; /* Cambia #007bff por tu color azul personalizado */
+}
+h3.text-center {
+    color:#9c0606; /* Cambia #007bff por tu color azul personalizado */
+}
+body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            color: #343a40;
+        }
+
+        .container {
+            margin-top: 5px;
+        }
+
+        img {
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .text-container {
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .lead {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .text-primary {
+            color: #007bff;
+        }
+
+        .text-justify {
+            text-align: justify;
+        }
+        .container-fluid {
+            padding: 50px 15px;
+        }
+
+        h1 {
+            color: #007bff;
+        }
+
+        .card {
+            border: none;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card-img-top {
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        .card-body {
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+
+        .card-title {
+            color: #007bff;
+        }
+
+        .lead {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .text-custom-color {
+            color: #9c0606 !important; /* Cambia #007bff por tu color azul personalizado */
+        }
+        .btn-wsp{
+            position:fixed;
+            width:85px;
+            height:60px;
+            line-height: 63px;
+            bottom:25px;
+            right:25px;
+            background:#25d366;
+            color:#FFF;
+            border-radius:100px;
+            text-align:center;
+            font-size:35px;
+            box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+            z-index:100;
+            transition: all 300ms ease;
+        }
+        .btn-wsp:hover{
+            background: #02e458;
+        }
+        @media only screen and (min-width:320px) and (max-width:768px){
+            .btn-wsp{
+                width:63px;
+                height:63px;
+                line-height: 66px;
+            }
+        }

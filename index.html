@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SM AUTOMATION</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="l.png" type="image/png">
+    <link rel="stylesheet" href="bootstrap-icons-1.11.3/font/bootstrap-icons.css">
+<!-- Usa esto -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<style>
+    .nav-link  {
+        font-family: Arial, sans-serif; /* Cambia el tipo de letra aquí */
+    }
+    .nav-item {
+    margin-right: 80px; /* Ajusta según el espacio deseado */
+}
+.navbar-brand img {
+            height: 80px; /* Tamaño del icono */
+            margin-right: 10px; /* Margen a la derecha para separarlo de otros elementos */
+            margin-top: 5px; /* Ajuste para centrarlo verticalmente */
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra suave alrededor del icono */
+        }
+        #navbar .navbar-nav .nav-item {
+        margin-right: 5px;
+ 
+    }
+    .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 0, 0, 0.3); /* Fondo rojo con opacidad */
+}
+
+.overlay1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 0, 0, 0.1); /* Fondo rojo con opacidad */
+}
+</style>
+<header>
+    
+    <nav id="top-navbar" class="navbar navbar-expand-lg "  style="background: linear-gradient(135deg, #9c0606, #cd0c0c);">
+        <div class="container justify-content-center"> <!-- Agrega la clase justify-content-center aquí -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="tel:+595-86252519">
+                        <i class="bi bi-phone"></i> <strong>+595-86252519</strong>   
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="mailto:info@smautomation.com.py">
+                        <i class="bi bi-envelope"></i> <strong>info@smautomation.com.py</strong> 
+                    </a>
+                </li>
+              <!--<li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+
+                </li>
+               <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                </li>-->   
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">
+                        <i class="bi bi-linkedin"> </i> <strong> linkedin</strong> 
+                    </a>
+                </li>
+              
+            </ul>
+        </div>
+    </nav>
+    
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light" style="background-color: #e9eaef !important; color: #fff;">
+        <div class="container">
+            <a class="navbar-brand" href="#" style="margin-left: -55px;">
+                <img src="l.png" alt="Logo de BLUEAUTOMATION" height="80" width="110">
+              </a>
+            
+            <!-- Botón del navegador -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Contenido de la barra de navegación -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                  
+                    <li class="nav-item">
+                        <a class="nav-link text-danger" href="#nosotros"><strong>Empresa</strong> </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="servicios.html"><strong>Servicios</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="proyecto.html"><strong>Proyectos</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="producto.html"><strong>Productos</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#contacto"><strong>Contacto</strong></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    
+    
+     
+</header>
+<body>
+    <section id="inicio"> 
+    <div id="carouselExample" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="overlay"></div> <!-- Capa para el fondo rojo transparente -->
+                <img src="img/sm1.png" class="d-block w-100 carousel-img" alt="...">
+                <div class="carousel-caption d-none d-md-block text-white" style="margin-top: -70px;">
+                    <h2 class="text-white"><strong>Innovación y Colaboración: Forjando el Futuro de la Automatización Industrial</strong></h2>
+                    <h5><strong>En S&M Automation S.A., la innovación es nuestra brújula, la colaboración con nuestros clientes es nuestro motor y los resultados tangibles son nuestro sello distintivo. Juntos, estamos dando forma al futuro de la automatización industrial, impulsando la eficiencia y la excelencia en cada paso del camino.</strong></h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="overlay1"></div> <!-- Capa para el fondo rojo transparente -->
+                 <img src="img/sm9.png" class="d-block w-100 carousel-img" alt="...">
+                 <div class="carousel-caption d-none d-md-block text-white" style="margin-top: -70px;">
+                    <h2 class="text-white"><strong>Odot Automation</strong></h2>
+                    <h5><strong>En S&M Automation S.A., nos enorgullece ser los representantes exclusivos de la prestigiosa marca Odot Automation en el territorio paraguayo. Nuestra sólida alianza con Odot Automation nos permite ofrecer a nuestros clientes una gama completa de soluciones avanzadas en automatización, 
+                        respaldadas por la innovación tecnológica y la calidad que caracterizan a esta reconocida marca a nivel mundial.</strong></h5>
+   
+                 </div>
+            </div>
+            <div class="carousel-item">
+                <div class="overlay1"></div> <!-- Capa para el fondo rojo transparente -->
+                 <img src="img/sm10.png" class="d-block w-100 carousel-img" alt="...">
+                 <div class="carousel-caption d-none d-md-block text-white" style="margin-top: -70px;">
+                    <h2 class="text-white"><strong>ASPRIUS</strong></h2>
+                    <h5><strong>En S&M Automation S.A., somos la asistencia tecnica y de soporte para pailas de 
+                        recubrimientos de comprimidos de la marca Asprius en Paraguay.</strong></h5>
+   
+                 </div>
+            </div>
+        
+        </div>
+        <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div></section>
+<br><br><br>
+    <section id="nosotros">
+        <div class="container">
+            <div class="text-center">
+                <h1 class="display-4 font-weight-bold text-custom-color">Bienvenido a <span class="text-custom-color">S&M Automation S.A</span></h1>
+                <h3 class="font-italic">Transformando industrias con tecnología ⚙️</h3>
+            </div>
+            <hr class="my-4">
+        
+            <div class="row">
+                <!-- Columna para la imagen -->
+                <div class="col-md-6">
+                    <img src="l.png" alt="Imagen de Somos Proya" class="img-fluid rounded" style="height: 340px; width: 100%;">
+                </div>
+        
+                <!-- Columna para el texto -->
+                <div class="col-md-6">
+                    <div class="text-container">
+                        <p class="lead">
+                            Somos <strong class="text-custom-color">S&M Automation S.A</strong>, una empresa comprometida con la vanguardia de la automatización industrial y el control de procesos. Nuestro equipo, apasionado y experimentado, está listo para abordar los desafíos tecnológicos más complejos y ofrecer soluciones que transforman la forma en que las empresas operan.
+                        </p>
+                        <p class="lead">
+                            Impulsados por la excelencia y la eficiencia, hemos establecido un sólido historial de éxito en proyectos que abarcan desde la modernización de equipos hasta la programación de sistemas avanzados. Nuestra misión es simple pero poderosa: potenciar la productividad y la competitividad de nuestros clientes a través de la tecnología.
+                        </p>
+                        <p class="lead">
+                            ¡Únete a nosotros mientras llevamos la innovación y la eficiencia a nuevas alturas! ✨
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+   
+       
+        <div class="container-fluid">
+            <h1 class="text-center mt-5 mb-4"><strong>¿QUÉ NOS HACE DIFERENTE?</strong> </h1>
+            
+            <div class="row">
+                <!-- Servicio 1 -->
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100">
+ 
+                        <img src="img/sm4.png" class="card-img-top" alt="Servicio 1" style="height: 380px;">
+                        <div class="card-body" style="background-color: rgb(151, 6, 6);">
+                            <h5 class="card-title text-center mb-3 text-white"><strong>EXPERIENCIA Y PASIÓN</strong></h5>
+                            <p class="card-text lead text-white">Contamos con un equipo de profesionales altamente especializados que aman lo que hacen. La pasión por la tecnología
+                                y l automatización es nuestra fuerza motriz </p>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Servicio 2 -->
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100" style="background-color: rgb(151, 6, 6);">
+ 
+                        <img src="img/sm5.jpg" class="card-img-top" alt="Servicio 2" style="height: 380px;">
+                        <div class="card-body">
+                            <h5 class="card-title text-center mb-3 text-white"><strong>INNOVACIÓN</strong></h5>
+                            <p class="card-text lead text-white">Estamos constantemente buscando las ultimas tendencias y tecnología para ofrecer a nuestros clientes soluciones a la 
+                                vanguardia de la industria.</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Servicio 3 -->
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100" style="background-color: rgb(151, 6, 6);">
+                        <img src="img/sm6.png" class="card-img-top" alt="Servicio 3" style="height: 380px;  ">
+                        <div class="card-body">
+                            <h5 class="card-title text-center mb-3 text-white"><strong>COLABORACIÓN</strong></h5>
+                            <p class="card-text lead text-white">Creemos en trabajar codo a codo con nuestros clientes para comprender sus necesidades
+                                 y superar sus desafios.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                   <!-- Servicio 4 -->
+                   <div class="col-md-3 mb-4">
+                    <div class="card h-100" style="background-color: rgb(151, 6, 6);">
+                        <img src="img/sm7.jpg" class="card-img-top" alt="Servicio 3" style="height: 380px;">
+                        <div class="card-body">
+                            <h5 class="card-title text-center mb-3 text-white"><strong>RESULTADOS COMPROBADOS</strong></h5>
+                            <p class="card-text lead text-white">Nuestros proyecto exitosos hablan por si mismo. Hemos ayudado a empresas
+                                 de diversos sectores a optimizar sus operaciones y lograr un mayor rendimiento.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <section id="nosotros">
+            <div class="container">
+                 <h3 class="text-center"> <strong>JUNTOS, PODEMOS IR TRANSFORMANDO LA INDUSTRIA CON TECNOLOGÍA 
+                </h3></strong> 
+                <br><br>
+                <div class="row">
+                       <!-- Columna para el texto -->
+                       <div class="col-md-6">
+                        <div class="text-container text-white" style="background-color: rgb(151, 6, 6);">
+                            <p class="lead">
+                                <strong class="text-custom-color"></strong> Confía en S&M Automation: Nuestra filosofía se centra en el cliente. Nos dedicamos a escuchar y a ofrecer soluciones que se adapten a sus necesidades. Ponemos a disposición de nuestros clientes nuestra amplia experiencia y nuestro compromiso con la automatización industrial para brindar solución.    </p>
+                            <h4 class="  text-justify text-white">
+                               <strong>Nuestra Misión:</strong>  
+                            </h4>
+                             <p class="lead text-justify">
+                                En S&M Automation S.A., nuestra misión es un faro que guía nuestro camino diario. Estamos comprometidos a impulsar la transformación tecnológica de la industria a través de soluciones de automatización innovadoras y eficientes. Trabajamos incansablemente para proporcionar a nuestros clientes las herramientas y 
+                                servicios necesarios para optimizar sus procesos, aumentar su productividad y lograr una ventaja competitiva. 🦾
+    
+                             </p>
+                             <h4 class="  text-justify">
+                                <strong> Nuestra Visión: </strong>
+                             </h4>
+                             <p class="lead text-justify">
+                                Nuestra visión es aún más ambiciosa. Visualizamos un futuro donde la automatización y la tecnología de vanguardia sean accesibles para todas las empresas, sin importar su tamaño o industria. Como líderes en la industria de la automatización,
+                                 estamos comprometidos a impulsar la innovación y la excelencia en cada proyecto que emprendemos. ⚡
+                             </p>
+                        </div>
+                    </div>
+                    <!-- Columna para la imagen -->
+                    <div class="col-md-6"><br><br><br><br><br>
+                        <img src="img/sm8.jpg" alt="Imagen de Somos Proya" class="img-fluid" style="height: 390px; width: 100%;">
+                    </div>
+                    
+                  
+                </div>
+                
+            </div>
+        </section>
+        <a href="https://api.whatsapp.com/send?phone=595986252519&text=Me%20gustaría%20conocer%20más%20sobre%20tus%20servicios%20y%20productos." class="btn-wsp" target="_blank">
+            <i class="bi bi-whatsapp"></i> 
+        </a>
+         
+    <section id="contacto" class="bg-light py-5 text-center">
+        <div class="container">
+            <h1 class=" text-center"> <strong>Contáctenos</strong> </h1>
+            <h5 class=" text-center"> Si está buscando soluciones de automatización confiables y efectivas,<br><br>
+            <span class="text-custom-color">ESTAMOS AQUÍ PARA AYUDARLO</span>  </h5>
+            <h1 class="text-center text-custom-color">Transformando Industria con Tecnología</h1> <br><br>
+
+            <div class="row mt-5">
+                <div class="col-md-6">
+                    <div class="contact-info p-4 rounded" style="background-color: #f8f9fa; border: 1px solid #dee2e6;">
+                        <h4 class="mb-4">Información de Contacto</h4>
+                        <p><strong>Dirección:</strong> 111456 De La Amistad, San Lorenzo, Central Department 111455, PY</p>
+                        <p><strong>Teléfono:</strong> +595-86252519</p>
+                        <p><strong>Email:</strong> <a href="mailto:info@smautomation.com.py">info@smautomation.com.py</a></p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="social-media p-4 rounded" style="background-color: #f8f9fa; border: 1px solid #dee2e6;">
+                        <h4 class="mb-4">Redes Sociales</h4>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="bi bi-linkedin"></i> <a href="https://www.linkedin.com/company/sm-automation-sa/about/" target="_blank" class="text-decoration-none">Linkedin</a></li>
+                            <!-- Agrega otras redes sociales según sea necesario -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+<!-- Mapa de la Dirección -->
+<div class="row mt-5">
+    <div class="col-md-12">
+        <div id="map" class="map-container rounded" style="height: 400px; border: 1px solid #dee2e6;"></div>
+    </div>
+</div>            
+        </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script>
+        // Inicializar Leaflet y crear el mapa
+        var map = L.map('map').setView([ -25.332406, -57.528055], 15); // Cambia las coordenadas según tu ubicación y el nivel de zoom
+    
+        // Añadir un mosaico (tile layer) para el mapa base
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+    
+        // Añadir un marcador en la ubicación específica
+        L.marker([ -25.332406, -57.528055]).addTo(map)
+            .bindPopup('¡Aquí estamos!'); // Puedes personalizar el contenido del popup
+    
+    </script>
+    <script type="text/javascript">
+        var secondNav = document.querySelector('#navbar'); // Selecciona el segundo navbar por su id
+    
+        window.addEventListener('scroll', function () {
+            if (window.pageYOffset > 50) { // Ajusta según el desplazamiento deseado
+                secondNav.classList.add('scrolled');
+            } else {
+                secondNav.classList.remove('scrolled');
+            }
+        });
+    </script>
+    
+      
+     
+
+</body>
+</html>
